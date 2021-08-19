@@ -1,0 +1,12 @@
+pfsense_aliases : 
+  - name: "alias1"
+    type: host
+    address: "185.153.114.121 185.153.114.122 185.153.114.125 185.153.114.126 185.153.114.127"
+    descr: "wordpress"
+    detail: "ad1 || ad2 || ad3 || ad4"
+
+
+
+## delete aliases 
+aliases : 
+  - alias1

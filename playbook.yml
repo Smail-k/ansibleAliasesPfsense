@@ -1,0 +1,13 @@
+---
+- hosts : all 
+  tasks : 
+    - name: "Add aliases"
+      pfsensible.core.pfsense_alias:
+        name: "{{ item.name }}"
+        type: "{{ item.type }}"
+        address: "{{ item.address }}"
+        descr: "{{ item.descr }}"
+        detail: "{{ item.detail }}"
+        state: present
+      with_items:
+        - "{{ pfsense_aliases }}"

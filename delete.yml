@@ -1,0 +1,9 @@
+---
+- hosts : all
+  tasks : 
+    - name: "Remove alias"
+      pfsensible.core.pfsense_alias:
+        name: "{{ item }}"
+        state: absent
+      with_items :
+        - "{{ aliases }}"  
